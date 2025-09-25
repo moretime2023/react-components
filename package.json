@@ -1,0 +1,47 @@
+{
+  "name": "@moretime/react_components",
+  "version": "0.0.1",
+  "private": false,
+  "description": "A minimal Vite + React + TypeScript library template (TSX) with dev preview and npm publish setup",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 5173",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vite",
+    "react",
+    "typescript",
+    "library",
+    "tsx"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/mini-react-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourname/mini-react-lib/issues"
+  },
+  "homepage": "https://github.com/yourname/mini-react-lib#readme",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
