@@ -4,8 +4,6 @@ export type HelloProps = {
   name?: string
 }
 
-const Hello: React.FC<HelloProps> = ({ name = 'World' }) => {
-  return <div style={{fontFamily: 'sans-serif'}}>Hello, {name} 👋</div>
+export const Hello: React.FC<HelloProps> = ({ name = 'World' }) => {
+  return <div style={{fontFamily: 'sans-serif', padding: 32}}>Hello, {name} 👋</div>
 }
-
-export default Hello

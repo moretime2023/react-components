@@ -1,6 +1,6 @@
 {
   "name": "@moretime/react-components",
-  "version": "0.0.1019",
+  "version": "0.0.1051",
   "private": false,
   "description": "A minimal Vite + React + TypeScript library template (TSX) with dev preview and npm publish setup",
   "main": "dist/index.cjs.js",
@@ -59,7 +59,7 @@
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
   },
-  "lastModify": "2025-09-26 16:05:02",
+  "lastModify": "2025-09-26 16:13:26",
   "dependencies": {
     "@react-spring/three": "^10.0.3",
     "@react-three/drei": "^10.7.6",
