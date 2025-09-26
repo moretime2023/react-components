@@ -1,11 +1,17 @@
 {
-  "name": "@moretime/react_components",
-  "version": "0.0.1",
+  "name": "@moretime/react-components",
+  "version": "0.0.82",
   "private": false,
   "description": "A minimal Vite + React + TypeScript library template (TSX) with dev preview and npm publish setup",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -26,12 +32,12 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourname/mini-react-lib.git"
+    "url": "https://github.com/moretime2023/react-components.git"
   },
   "bugs": {
-    "url": "https://github.com/yourname/mini-react-lib/issues"
+    "url": "https://github.com/moretime2023/react-components/issues"
   },
-  "homepage": "https://github.com/yourname/mini-react-lib#readme",
+  "homepage": "https://github.com/moretime2023/react-components#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0",
@@ -42,6 +48,14 @@
     "@types/react-dom": "^18.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^4.0.0"
-  }
+    "@vitejs/plugin-react": "^4.0.0",
+    "semantic-release": "^21.0.0",
+    "@semantic-release/commit-analyzer": "^10.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/npm": "^9.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^9.0.0"
+  },
+  "lastModify": "2025-09-26 15:45:29"
 }

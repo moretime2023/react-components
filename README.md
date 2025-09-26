@@ -1,3 +1,51 @@
+# react-components
+
+Minimal React + TypeScript component library built with Vite. This repository is set up for publishing to npm and supports automatic releases via semantic-release.
+
+## Install
+
+From npm:
+
+```bash
+npm install @moretime/react-components
+# or
+pnpm add @moretime/react-components
+```
+
+## Usage
+
+ESM import:
+
+```ts
+import { Hello } from '@moretime/react-components'
+
+// <Hello /> in your React app
+```
+
+CommonJS require (if needed):
+
+```js
+const { Hello } = require('@moretime/react-components')
+```
+
+## Development
+
+Run the dev preview:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Build:
+
+```bash
+pnpm run build
+```
+
+## Release
+
+This repository contains a GitHub Actions workflow that will publish the package when a tag starting with `v` is pushed. It also supports semantic-release on the `release/*` branch via `secrets.NPM_TOKEN` and the default `GITHUB_TOKEN`.
 # Mini React Lib (Vite + TSX)
 
 最小的 Vite + React + TypeScript (TSX) 库模板，支持本地预览与构建为可发布到 npm 的包（ESM + CJS + types）。

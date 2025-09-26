@@ -8,6 +8,8 @@ export default defineConfig(({ command, mode }) => ({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'MiniReactLib',
+      // explicit formats: produce ES and CJS outputs
+      formats: ['es', 'cjs'],
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
