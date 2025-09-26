@@ -1,6 +1,6 @@
 {
   "name": "@moretime/react-components",
-  "version": "0.0.1197",
+  "version": "0.0.1198",
   "private": false,
   "description": "A minimal Vite + React + TypeScript library template (TSX) with dev preview and npm publish setup",
   "main": "dist/index.cjs.js",
@@ -39,33 +39,24 @@
   },
   "homepage": "https://github.com/moretime2023/react-components#readme",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/commit-analyzer": "^10.0.0",
-    "@semantic-release/git": "^10.0.0",
-    "@semantic-release/github": "^9.0.0",
-    "@semantic-release/npm": "^9.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.0",
     "@types/node": "^24.5.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "semantic-release": "^21.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
   },
   "lastModify": "2025-09-26 16:21:21",
   "dependencies": {
-    "@moretime/react-components": "^0.0.1051",
     "@react-spring/three": "^10.0.3",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
     "@react-three/postprocessing": "^3.0.4",
+    "maath": "^0.10.8",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "three": "^0.180.0"
   }
 }
