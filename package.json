@@ -1,8 +1,10 @@
 {
-  "name": "react-components",
-  "private": true,
-  "version": "0.0.4792",
+  "name": "@moretime/react-components",
+  "version": "0.0.4796",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -40,5 +42,5 @@
       "vite": "npm:rolldown-vite@7.1.12"
     }
   },
-  "lastModify": "2025-09-27 08:48:51"
+  "lastModify": "2025-09-27 08:52:23"
 }
