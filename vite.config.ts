@@ -5,6 +5,7 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 export default defineConfig({
   build: {
+    copyPublicDir: false,
     lib: {
       entry: path.resolve(__dirname, "src/index.tsx"),
       name: "index",
@@ -24,6 +25,6 @@ export default defineConfig({
     commonjsOptions: {
       esmExternals: ["react"],
     },
-  }, 
+  },
   plugins: [dts(), libInjectCss()],
 });
