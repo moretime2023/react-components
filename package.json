@@ -1,6 +1,6 @@
 {
   "name": "@moretime/react-components",
-  "version": "0.0.4960",
+  "version": "0.0.4978",
   "type": "module",
   "files": [
     "dist"
@@ -21,11 +21,10 @@
     "preview": "vite preview",
     "prepublish": "npm run build"
   },
-  "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
+  "peerDependencies": {},
   "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "three": "^0.180.0",
     "@react-three/fiber": "^9.3.0",
     "@react-three/postprocessing": "^3.0.4",
@@ -54,5 +53,5 @@
       "vite": "npm:rolldown-vite@7.1.12"
     }
   },
-  "lastModify": "2025-09-27 09:27:44"
+  "lastModify": "2025-09-27 09:43:11"
 }

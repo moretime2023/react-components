@@ -27,14 +27,14 @@ export default defineConfig({
       formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      // external: ["react", "react-dom"],
       // ensure UMD build references the correct global variable names for externals
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      },
+      // output: {
+      //   globals: {
+      //     react: 'React',
+      //     'react-dom': 'ReactDOM'
+      //   }
+      // },
       plugins: [
         typescript({
           tsconfig: './tsconfig.app.json', // 指定 tsconfig 文件
