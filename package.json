@@ -1,7 +1,10 @@
 {
   "name": "@moretime/react-components",
-  "version": "0.0.4802",
+  "version": "0.0.4803",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/componentsName.umd.js",
   "module": "./dist/componentsName.es.js",
   "typings": "./dist/index.d.ts",
@@ -42,5 +45,5 @@
       "vite": "npm:rolldown-vite@7.1.12"
     }
   },
-  "lastModify": "2025-09-27 08:55:34"
+  "lastModify": "2025-09-27 08:58:01"
 }
