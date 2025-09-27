@@ -1,18 +1,38 @@
-import { createRoot } from 'react-dom/client'
-import { Canvas } from '@react-three/fiber'
+import { easing } from "maath"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
+import { Sky, Bvh } from "@react-three/drei"
+import { EffectComposer, Selection, Outline, N8AO, TiltShift2, ToneMapping } from "@react-three/postprocessing"
+import { CountAnimate } from "../src"
+import { createRoot } from "react-dom/client"
 import './index.css'
-import { CountAnimate } from '../src'
 
-export function App() {
-  return <div className='size-full' style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 12 }}>
-    <h2>Example View</h2>
+export const App = () => <Canvas className="size-full" style={{ background: "#000" }} camera={{ position: [0, 1, 6] }}>
+  <ambientLight intensity={1.5 * Math.PI} />
+  <Sky />
+  <Effects />
+  <Bvh firstHitOnly>
+    <Selection>
+      <group position={[1,1,1]}></group>
+      {/* <Scene rotation={[0, Math.PI / 2, 0]} position={[0, -1, -0.85]} /> */}
+      <CountAnimate value={3000} />
+    </Selection>
+  </Bvh>
+</Canvas>
 
-    <div style={{flex: 1, overflow: 'hidden', borderRadius: '24px', boxShadow: '0 0 20px #000'}}>
-      <Canvas camera={{ position: [0, 0, 5] }} className='size-full'>
-        <CountAnimate value={3000.32} currency='$' position={[-2, 0.3, -3.25]} />
-      </Canvas>
-    </div>
-  </div>
+function Effects() {
+  const { size } = useThree()
+  useFrame((state, delta) => {
+    easing.damp3(state.camera.position, [state.pointer.x, 1 + state.pointer.y / 2, 8 + Math.atan(state.pointer.x * 2)], 0.3, delta)
+    state.camera.lookAt(state.camera.position.x * 0.9, 0, -4)
+  })
+  return (
+    <EffectComposer stencilBuffer enableNormalPass={false} autoClear={false} multisampling={4}>
+      <N8AO halfRes aoSamples={5} aoRadius={0.4} distanceFalloff={0.75} intensity={1} />
+      <Outline visibleEdgeColor={0} hiddenEdgeColor={0} blur width={size.width * 1.25} edgeStrength={10} />
+      <TiltShift2 samples={5} blur={0.1} />
+      <ToneMapping />
+    </EffectComposer>
+  )
 }
 
 createRoot(document.getElementById('root')!).render(<App />);

@@ -1,1 +1,1 @@
-export * from './Ui/CountAnimate';
+export * from './UI/CountAnimate';
